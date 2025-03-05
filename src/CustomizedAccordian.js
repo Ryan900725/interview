@@ -77,8 +77,8 @@ export default function CustomizedAccordions() {
       />
       {jsonData.map((d, i) => {
         return (
-          (d.summary.includes(searchText) ||
-            d.details.includes(searchText)) && (
+          (d.summary.toLowerCase().includes(searchText.toLowerCase()) ||
+            d.details.toLowerCase().includes(searchText.toLowerCase())) && (
             <AccordionItem
               key={i}
               panelName={"panel" + (i + 1)}
